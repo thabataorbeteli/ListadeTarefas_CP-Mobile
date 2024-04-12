@@ -46,7 +46,7 @@ const TarefaItem: React.FC<TarefaItemProps> = ({ id, titulo }) => {
         <Text flex={3}>{titulo}</Text> // Exibindo o título da tarefa à esquerda
       )}
       <IconButton
-        icon={<Ionicons name={editando ? "checkmark" : "pencil"} size={14} color="#402291" />} // Ícone muda dependendo do modo de edição
+        icon={<Ionicons name={editando ? "checkmark" : "pencil"} size={14} color="#ec1e8f" />} // Ícone muda dependendo do modo de edição
         colorScheme="light"
         onPress={handleEditar} // Chamando a função handleEditar ao clicar no botão
         style={{ borderRadius: 50, backgroundColor: 'gold', marginLeft: 4 }} // Estilizando o botão editar
