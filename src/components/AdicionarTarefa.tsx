@@ -33,7 +33,7 @@ const AdicionarTarefa: React.FC = () => {
           icon={<Ionicons name="add" size={24} color="#ec1e8f" />}
           colorScheme="light"
           onPress={handleAdicionarTarefa}
-          style={{ borderRadius: 50, backgroundColor: 'gold' }}
+          style={{ borderRadius: 50, backgroundColor: 'green' }}
         />
       </View>
     </View>
