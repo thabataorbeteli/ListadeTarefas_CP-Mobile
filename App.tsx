@@ -21,6 +21,5 @@ export default function App() {
       </ProvedorEstadoGlobal>
       {/* Fim do contexto do ProvedorEstadoGlobal */}
     </NativeBaseProvider>
-    // Fim do contexto do NativeBaseProvider
   );
 }
