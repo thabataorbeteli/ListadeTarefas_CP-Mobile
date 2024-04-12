@@ -24,7 +24,7 @@ const AdicionarTarefa: React.FC = () => {
     <View style={{ backgroundColor: '#402291', paddingVertical: 20, paddingHorizontal: 20, paddingTop: 50 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
         <View style={{ flex: 1, marginRight: 10 }}>
-          {/* Campo de entrada para o usuário digitar o título da nova tarefa */}
+          {/* Campo de entrada para o usuário digitar o título da nova tarefa! */}
           <Input
             placeholder="Digite uma tarefa"
             placeholderTextColor="white"
