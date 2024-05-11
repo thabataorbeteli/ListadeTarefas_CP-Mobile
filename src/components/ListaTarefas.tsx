@@ -5,14 +5,14 @@ import { useEstadoGlobal } from "../hooks/EstadoGlobal";
 
 interface TarefaItemProps {
   id: number;
-  titulo: string;
+  tarefa: string;
 }
 
-const TarefaItem: React.FC<TarefaItemProps> = ({ id, titulo }) => {
+const TarefaItem: React.FC<TarefaItemProps> = ({ id, tarefa }) => {
   const { editarTarefa, excluirTarefa } = useEstadoGlobal();
   
   const [editando, setEditando] = React.useState(false);
-  const [novoTitulo, setNovoTitulo] = React.useState(titulo);
+  const [novoTitulo, setNovoTitulo] = React.useState(tarefa);
 
   const handleEditar = () => {
     if (editando) {
@@ -38,7 +38,7 @@ const TarefaItem: React.FC<TarefaItemProps> = ({ id, titulo }) => {
           onChangeText={setNovoTitulo} 
         />
       ) : (
-        <Text flex={3}>{titulo}</Text> 
+        <Text flex={3}>{tarefa}</Text> 
       )}
       <IconButton
         icon={<Ionicons name={editando ? "checkmark" : "pencil"} size={14} color="#ec1e8f" />} 
@@ -63,7 +63,7 @@ const ListaTarefas: React.FC = () => {
   return (
     <FlatList
       data={tarefas} 
-      renderItem={({ item }) => <TarefaItem id={item.id} titulo={item.titulo} />} 
+      renderItem={({ item }) => <TarefaItem id={item.id} tarefa={item.tarefa} />} 
       keyExtractor={(item) => item.id.toString()} 
       contentContainerStyle={{ flexGrow: 1 }} 
     />
